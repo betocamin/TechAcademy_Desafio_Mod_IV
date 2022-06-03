@@ -1,3 +1,4 @@
+/* Importação da Fonte */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,200;1,500&display=swap');
 
 *{
@@ -5,7 +6,6 @@
     margin: 0;
     box-sizing: border-box;
 }
-
 html {
     font-size: 11px;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
@@ -32,7 +32,6 @@ p {
     margin-bottom: 2rem;
 
 }
-
 .container{
     min-height: 100vh;
     width: 100%;
@@ -79,7 +78,6 @@ p {
 	animation-duration: 0.5s;
     animation-delay: 5s;
 }
-
 #intro .cta{
     display: inline-block;
     padding: 10px 30px;
@@ -118,22 +116,23 @@ p {
     margin: 0 auto;
     padding: 50px 20px;
 }
-
 .section-container h1 {
     font-size: 3rem;
     text-align: right;
     margin: 4rem 0;
 }
-
 .section-container p {
     text-align: justify;
 }
+
+/* Seção Biografia */
 
 #biografia {
     min-height: 100vh;
 }
 
 /* Seção Photo */
+
 #photo-full {
 background-image: url(images/alvorada.jpg);
 background-size: cover;
@@ -151,7 +150,6 @@ height: 500px;
     background-position: top;
     background-position-y: 20px;
 }
-
 #portfolio .portfolio{
     flex-direction: column;
     max-width: 1200px;
@@ -161,7 +159,6 @@ height: 500px;
 #portfolio .section-container h1 {
     font-size: 3rem;
 }
-
 #portfolio .all-projects {
     display: flex;
     align-items: center;
@@ -177,7 +174,6 @@ height: 500px;
     overflow: hidden;
     border-radius: 20px;
 }
-
 #portfolio .project-info {
     padding: 30px;
     flex-basis: 50%;
@@ -189,14 +185,12 @@ height: 500px;
     background-color: #222;
     color: #e8eddf;
 }
-
 #portfolio .project-info h1 {
     font-size: 2.5rem;
     font-weight: 500;
     margin: 0;
     text-align: left;
 }
-
 #portfolio .project-info h2 {
     font-size: 1.8rem;
     font-weight: 500;
@@ -205,14 +199,12 @@ height: 500px;
     background-color: gold;
     padding: 5px 15px;
 }
-
 #portfolio .project-img {
     flex-basis: 50%;
     height: 300px;
     overflow: hidden;
     position: relative;
 }
-
 #portfolio .project-img img{
     transition: 0.5s ease-in-out transform;
     filter: brightness(0.6) grayscale(1);
@@ -222,6 +214,7 @@ height: 500px;
     filter: none;
 }
 
+/* Seção Citação */
 #quote{
     margin: 0 auto;
     padding: 65px 30px;
@@ -232,7 +225,6 @@ height: 500px;
     background-position: left;
     background-color: #fcfcfc;
 }
-
 #quote blockquote {
     max-width: 1200px;
     margin: 0 auto;
@@ -281,7 +273,6 @@ footer #footer-container{
     flex-direction: column;
     justify-content: space-around;
 }
-
 footer .footer-colunas{
     flex-basis: 100%;
     margin-bottom: 40px;
@@ -292,7 +283,7 @@ footer .footer-colunas h1 {
     margin-bottom: 15px;
 }
 
-/* Keyframes */
+/* Animação da Intro */
 
 @keyframes fadeInOpacity {
     0% {
@@ -303,15 +294,17 @@ footer .footer-colunas h1 {
     }
   }
 
-/* Media Query */
+/* Media Query para Desktop*/
+
 @media only screen and (min-width: 768px) {
+    /* Intro */
     #intro h1, .section-title{
         font-size: 5rem;
     }
-
     #intro .cta{
         font-size: 2rem;
     }
+    /* Portifolio */
     #portfolio .project-item {
         flex-direction: row;
         height: 400px;
@@ -331,6 +324,7 @@ footer .footer-colunas h1 {
     #portfolio .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
+    /* Citação */
     #quote{
         padding: 150px 30px;
     }
@@ -340,6 +334,7 @@ footer .footer-colunas h1 {
     #quote blockquote span {
         font-size: 3rem;
     }
+    /* Footer */
     footer #footer-container{
         flex-direction: row;
     }
