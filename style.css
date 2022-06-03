@@ -1,28 +1,33 @@
 /* Importação da Fonte */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,200;1,500&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
 html {
     font-size: 11px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     scroll-behavior: smooth;
 }
-h1, h2 {
-    font-family: 'Merriweather', 'Times New Roman', Times, serif ;
+
+h1,
+h2 {
+    font-family: 'Merriweather', 'Times New Roman', Times, serif;
 }
 
 a {
     text-decoration: none;
 }
+
 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
 p {
     font-size: 1.4rem;
     margin-top: 5px;
@@ -32,7 +37,8 @@ p {
     margin-bottom: 2rem;
 
 }
-.container{
+
+.container {
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -42,17 +48,19 @@ p {
 
 /* Seção de apresentação */
 
-#intro{
+#intro {
     background-image: url(images/copam.jpg);
     background-size: cover;
     background-position: top center;
     position: relative;
     z-index: 1;
 }
-#intro .frame{
+
+#intro .frame {
     padding: 50px;
     background-color: rgba(0, 0, 0, 0.6);
 }
+
 #intro h1 {
     box-sizing: content-box;
     display: block;
@@ -60,25 +68,30 @@ p {
     color: white;
     opacity: 0;
     animation: fadeInOpacity .5s ease forwards;
-	animation-duration: 1s;   
+    animation-duration: 1s;
 }
+
 #intro h1:nth-child(1) {
     animation-delay: 0.5s;
 }
+
 #intro h1:nth-child(2) {
     animation-delay: 1.5s;
 }
+
 #intro h1:nth-child(3) {
     color: gold;
     animation-delay: 2.5s;
 }
+
 #intro span {
     opacity: 0;
     animation: fadeInOpacity .5s ease forwards;
-	animation-duration: 0.5s;
+    animation-duration: 0.5s;
     animation-delay: 5s;
 }
-#intro .cta{
+
+#intro .cta {
     display: inline-block;
     padding: 10px 30px;
     color: gold;
@@ -92,19 +105,21 @@ p {
     transition-property: background-color, color;
 
 }
-#intro .cta:hover{
+
+#intro .cta:hover {
     color: white;
     font-weight: 500;
     background-color: gold;
 }
-#intro::after{
+
+#intro::after {
     content: '';
     position: absolute;
-    left:0;
+    left: 0;
     top: 0;
-    height:100%;
+    height: 100%;
     width: 100%;
-    background-color:black;
+    background-color: black;
     opacity: 0.7;
     z-index: -1;
 }
@@ -116,11 +131,13 @@ p {
     margin: 0 auto;
     padding: 50px 20px;
 }
+
 .section-container h1 {
     font-size: 3rem;
     text-align: right;
     margin: 4rem 0;
 }
+
 .section-container p {
     text-align: justify;
 }
@@ -134,11 +151,11 @@ p {
 /* Seção Photo */
 
 #photo-full {
-background-image: url(images/alvorada.jpg);
-background-size: cover;
-background-position: center;
-position: relative;
-height: 500px;
+    background-image: url(images/alvorada.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 500px;
 }
 
 /* Seção de Portifólio */
@@ -150,23 +167,27 @@ height: 500px;
     background-position: top;
     background-position-y: 20px;
 }
-#portfolio .portfolio{
+
+#portfolio .portfolio {
     flex-direction: column;
     max-width: 1200px;
     margin: 0 auto;
     padding: 50px 20px;
 }
+
 #portfolio .section-container h1 {
     font-size: 3rem;
 }
+
 #portfolio .all-projects {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-#portfolio .project-item{
-    display:flex;
+
+#portfolio .project-item {
+    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -174,6 +195,7 @@ height: 500px;
     overflow: hidden;
     border-radius: 20px;
 }
+
 #portfolio .project-info {
     padding: 30px;
     flex-basis: 50%;
@@ -185,12 +207,14 @@ height: 500px;
     background-color: #222;
     color: #e8eddf;
 }
+
 #portfolio .project-info h1 {
     font-size: 2.5rem;
     font-weight: 500;
     margin: 0;
     text-align: left;
 }
+
 #portfolio .project-info h2 {
     font-size: 1.8rem;
     font-weight: 500;
@@ -199,23 +223,26 @@ height: 500px;
     background-color: gold;
     padding: 5px 15px;
 }
+
 #portfolio .project-img {
     flex-basis: 50%;
     height: 300px;
     overflow: hidden;
     position: relative;
 }
-#portfolio .project-img img{
+
+#portfolio .project-img img {
     transition: 0.5s ease-in-out transform;
     filter: brightness(0.6) grayscale(1);
 }
-#portfolio .project-item:hover .project-img img{
+
+#portfolio .project-item:hover .project-img img {
     transform: scale(1.1);
     filter: none;
 }
 
 /* Seção Citação */
-#quote{
+#quote {
     margin: 0 auto;
     padding: 65px 30px;
     width: 100%;
@@ -225,6 +252,7 @@ height: 500px;
     background-position: left;
     background-color: #fcfcfc;
 }
+
 #quote blockquote {
     max-width: 1200px;
     margin: 0 auto;
@@ -234,6 +262,7 @@ height: 500px;
     text-align: right;
     color: #888;
 }
+
 #quote blockquote span {
     font-size: 2rem;
 }
@@ -248,35 +277,43 @@ footer {
     background-size: cover;
     font-size: 1.5em;
 
-    
+
 }
+
 #footer-container {
     padding: 30px;
 }
+
 footer ul {
     list-style-type: none;
 }
+
 footer li {
     padding: 0.5rem 0;
 }
+
 footer a {
     color: gold;
     text-decoration: none;
 }
+
 footer a:hover {
     color: #e8eddf;
 }
-footer #footer-container{
+
+footer #footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-footer .footer-colunas{
+
+footer .footer-colunas {
     flex-basis: 100%;
     margin-bottom: 40px;
 }
+
 footer .footer-colunas h1 {
     font-size: 2.5rem;
     color: #e8eddf;
@@ -287,23 +324,28 @@ footer .footer-colunas h1 {
 
 @keyframes fadeInOpacity {
     0% {
-      opacity: 0;
+        opacity: 0;
     }
+
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
+}
 
 /* Media Query para Desktop*/
 
 @media only screen and (min-width: 768px) {
+
     /* Intro */
-    #intro h1, .section-title{
+    #intro h1,
+    .section-title {
         font-size: 5rem;
     }
-    #intro .cta{
+
+    #intro .cta {
         font-size: 2rem;
     }
+
     /* Portifolio */
     #portfolio .project-item {
         flex-direction: row;
@@ -312,30 +354,38 @@ footer .footer-colunas h1 {
         width: 100%;
         border-radius: 20px;
     }
-    #portfolio .all-projects .project-info{
+
+    #portfolio .all-projects .project-info {
         height: 100%
     }
-    #portfolio .project-info h1{
+
+    #portfolio .project-info h1 {
         font-size: 3rem;
     }
-    #portfolio .all-projects .project-img{
+
+    #portfolio .all-projects .project-img {
         height: 100%
     }
+
     #portfolio .project-item:nth-child(even) {
         flex-direction: row-reverse;
     }
+
     /* Citação */
-    #quote{
+    #quote {
         padding: 150px 30px;
     }
+
     #quote blockquote {
         font-size: 2rem;
     }
+
     #quote blockquote span {
         font-size: 3rem;
     }
+
     /* Footer */
-    footer #footer-container{
+    footer #footer-container {
         flex-direction: row;
     }
 }
