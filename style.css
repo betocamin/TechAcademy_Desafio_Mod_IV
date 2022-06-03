@@ -20,6 +20,11 @@ h2 {
 
 a {
     text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: rgb(143, 55, 0);
 }
 
 img {
