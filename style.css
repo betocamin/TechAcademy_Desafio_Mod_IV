@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,200;1,500&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 11px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    scroll-behavior: smooth;
+}
+h1, h2 {
+    font-family: 'Merriweather', 'Times New Roman', Times, serif ;
+}
+
+a {
+    text-decoration: none;
+}
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p {
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+    margin-bottom: 2rem;
+
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Seção de apresentação */
+
+#intro{
+    background-image: url(images/copam.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+#intro .frame{
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#intro h1 {
+    box-sizing: content-box;
+    display: block;
+    font-size: 3rem;
+    color: white;
+    opacity: 0;
+    animation: fadeInOpacity .5s ease forwards;
+	animation-duration: 1s;   
+}
+#intro h1:nth-child(1) {
+    animation-delay: 0.5s;
+}
+#intro h1:nth-child(2) {
+    animation-delay: 1.5s;
+}
+#intro h1:nth-child(3) {
+    color: gold;
+    animation-delay: 2.5s;
+}
+#intro span {
+    opacity: 0;
+    animation: fadeInOpacity .5s ease forwards;
+	animation-duration: 0.5s;
+    animation-delay: 5s;
+}
+
+#intro .cta{
+    display: inline-block;
+    padding: 10px 30px;
+    color: gold;
+    background-color: transparent;
+    border: 2px solid gold;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .5s ease;
+    transition-property: background-color, color;
+
+}
+#intro .cta:hover{
+    color: white;
+    font-weight: 500;
+    background-color: gold;
+}
+#intro::after{
+    content: '';
+    position: absolute;
+    left:0;
+    top: 0;
+    height:100%;
+    width: 100%;
+    background-color:black;
+    opacity: 0.7;
+    z-index: -1;
+}
+
+/* Seções Gerais */
+
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.section-container h1 {
+    font-size: 3rem;
+    text-align: right;
+    margin: 4rem 0;
+}
+
+.section-container p {
+    text-align: justify;
+}
+
+#biografia {
+    min-height: 100vh;
+}
+
+/* Seção Photo */
+#photo-full {
+background-image: url(images/alvorada.jpg);
+background-size: cover;
+background-position: center;
+position: relative;
+height: 500px;
+}
+
+/* Seção de Portifólio */
+
+#portfolio {
+    background-color: gold;
+    background-image: url(images/formas.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-position-y: 20px;
+}
+
+#portfolio .portfolio{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+#portfolio .section-container h1 {
+    font-size: 3rem;
+}
+
+#portfolio .all-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#portfolio .project-item{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#portfolio .project-info {
+    padding: 30px;
+    flex-basis: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #222;
+    color: #e8eddf;
+}
+
+#portfolio .project-info h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 0;
+    text-align: left;
+}
+
+#portfolio .project-info h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 10px;
+    color: black;
+    background-color: gold;
+    padding: 5px 15px;
+}
+
+#portfolio .project-img {
+    flex-basis: 50%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#portfolio .project-img img{
+    transition: 0.5s ease-in-out transform;
+    filter: brightness(0.6) grayscale(1);
+}
+#portfolio .project-item:hover .project-img img{
+    transform: scale(1.1);
+    filter: none;
+}
+
+#quote{
+    margin: 0 auto;
+    padding: 65px 30px;
+    width: 100%;
+    background-image: url(images/oscar.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-color: #fcfcfc;
+}
+
+#quote blockquote {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    font-weight: 100;
+    font-style: italic;
+    text-align: right;
+    color: #888;
+}
+#quote blockquote span {
+    font-size: 2rem;
+}
+
+/* Footer */
+
+footer {
+    padding: 50px 0;
+    background-color: #252525;
+    color: #999;
+    background-image: url(/images/footer-bg2.jpg);
+    background-size: cover;
+    font-size: 1.5em;
+
+    
+}
+#footer-container {
+    padding: 30px;
+}
+footer ul {
+    list-style-type: none;
+}
+footer li {
+    padding: 0.5rem 0;
+}
+footer a {
+    color: gold;
+    text-decoration: none;
+}
+footer a:hover {
+    color: #e8eddf;
+}
+footer #footer-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer .footer-colunas{
+    flex-basis: 100%;
+    margin-bottom: 40px;
+}
+footer .footer-colunas h1 {
+    font-size: 2.5rem;
+    color: #e8eddf;
+    margin-bottom: 15px;
+}
+
+/* Keyframes */
+
+@keyframes fadeInOpacity {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+/* Media Query */
+@media only screen and (min-width: 768px) {
+    #intro h1, .section-title{
+        font-size: 5rem;
+    }
+
+    #intro .cta{
+        font-size: 2rem;
+    }
+    #portfolio .project-item {
+        flex-direction: row;
+        height: 400px;
+        margin: 20px;
+        width: 100%;
+        border-radius: 20px;
+    }
+    #portfolio .all-projects .project-info{
+        height: 100%
+    }
+    #portfolio .project-info h1{
+        font-size: 3rem;
+    }
+    #portfolio .all-projects .project-img{
+        height: 100%
+    }
+    #portfolio .project-item:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+    #quote{
+        padding: 150px 30px;
+    }
+    #quote blockquote {
+        font-size: 2rem;
+    }
+    #quote blockquote span {
+        font-size: 3rem;
+    }
+    footer #footer-container{
+        flex-direction: row;
+    }
+}
