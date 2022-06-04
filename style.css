@@ -27,6 +27,7 @@ a:hover {
     color: rgb(143, 55, 0);
 }
 
+
 img {
     height: 100%;
     width: 100%;
@@ -278,7 +279,7 @@ footer {
     padding: 50px 0;
     background-color: #252525;
     color: #999;
-    background-image: url(/images/footer-bg2.jpg);
+    background-image: url(images/footer-bg2.jpg);
     background-size: cover;
     font-size: 1.5em;
 
